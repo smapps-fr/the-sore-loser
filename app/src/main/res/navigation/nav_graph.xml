@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gameListFragment">
+    <fragment
+        android:id="@+id/gameListFragment"
+        android:name="fr.neobagram.thesoreloser.presentation.view.fragment.GameListFragment"
+        android:label="GameListFragment" >
+        <action
+            android:id="@+id/action_gameListFragment_to_partyListFragment"
+            app:destination="@id/partyListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partyListFragment"
+        android:name="fr.neobagram.thesoreloser.presentation.view.fragment.PartyListFragment"
+        android:label="PartyListFragment" >
+        <action
+            android:id="@+id/action_partyListFragment_to_gameplayFragment"
+            app:destination="@id/gameplayFragment" />
+        <action
+            android:id="@+id/action_partyListFragment_to_createPartyFragment"
+            app:destination="@id/createPartyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameplayFragment"
+        android:name="fr.neobagram.thesoreloser.presentation.view.fragment.GameplayFragment"
+        android:label="GameplayFragment" >
+        <action
+            android:id="@+id/action_gameplayFragment_to_gameScoreFragment"
+            app:destination="@id/gameScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPartyFragment"
+        android:name="fr.neobagram.thesoreloser.presentation.view.fragment.CreatePartyFragment"
+        android:label="CreatePartyFragment" >
+        <action
+            android:id="@+id/action_createPartyFragment_to_createPlayerFragment"
+            app:destination="@id/createPlayerFragment" />
+        <action
+            android:id="@+id/action_createPartyFragment_to_gameplayFragment"
+            app:destination="@id/gameplayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPlayerFragment"
+        android:name="fr.neobagram.thesoreloser.presentation.view.fragment.CreatePlayerFragment"
+        android:label="CreatePlayerFragment" />
+    <fragment
+        android:id="@+id/gameScoreFragment"
+        android:name="fr.neobagram.thesoreloser.presentation.view.fragment.GameScoreFragment"
+        android:label="GameScoreFragment" >
+        <action
+            android:id="@+id/action_gameScoreFragment_to_partyStatsFragment"
+            app:destination="@id/partyStatsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partyStatsFragment"
+        android:name="fr.neobagram.thesoreloser.presentation.view.fragment.PartyStatsFragment"
+        android:label="PartyStatsFragment" >
+        <action
+            android:id="@+id/action_partyStatsFragment_to_gameListFragment"
+            app:destination="@id/gameListFragment" />
+        <action
+            android:id="@+id/action_partyStatsFragment_to_gameplayFragment"
+            app:destination="@id/gameplayFragment" />
+    </fragment>
+</navigation>
